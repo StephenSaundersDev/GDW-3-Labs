@@ -12,11 +12,14 @@ public class PlayerMovement : MonoBehaviour
     private InputAction move;
     private InputAction fire;
 
+    private Transform cameraTransform;
+
     Vector2 moveDirection = Vector2.zero;
 
     private void Awake()
     {
         playerControls = new PlayerInput();
+        cameraTransform = Camera.main.transform;
     }
 
     // Update is called once per frame
@@ -27,7 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector3(moveDirection.x * speed, 0, moveDirection.y * speed);
+        Vector3 temp = new Vector3(moveDirection.x, 0f, moveDirection.y);
+        temp = cameraTransform.forward * temp.z + cameraTransform.right * temp.x;
+        body.velocity = new Vector3(temp.x * speed, body.velocity.y, temp.z * speed);
     }
 
     private void OnEnable()
