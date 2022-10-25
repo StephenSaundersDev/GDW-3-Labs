@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GoalHandler : MonoBehaviour
 {
-    GameObject loadingScreen;
+    public GameObject loadingScreen;
 
     private void Start()
     {
         if (loadingScreen == null)
-            loadingScreen = GameObject.FindGameObjectWithTag("LoadingPanel").transform.GetChild(0).gameObject;
+            loadingScreen = GameObject.FindGameObjectWithTag("LoadingPanel");
+        
     }
 
     void OnTriggerEnter(Collider col)

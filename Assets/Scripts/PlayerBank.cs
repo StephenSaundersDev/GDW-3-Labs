@@ -11,7 +11,7 @@ public class PlayerBank : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(balance);
+        //Debug.Log(balance);
         balanceText.text = "" + balance;
     }
 }

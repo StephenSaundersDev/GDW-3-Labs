@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bank
   - LoadingPanel
+  - Lives
   layers:
   - Default
   - TransparentFX
