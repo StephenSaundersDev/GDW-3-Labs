@@ -20,4 +20,9 @@ public class MenuHandler : MonoBehaviour
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
+
+    public void MagnifyPressed()
+    {
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
 }

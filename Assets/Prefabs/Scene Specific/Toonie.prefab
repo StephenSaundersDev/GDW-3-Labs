@@ -5847,6 +5847,22 @@ PrefabInstance:
       propertyPath: m_Faces.Array.data[29].m_SubmeshIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8437576767659278632, guid: 41fcd088ec4b94a4a98501536f5d1660, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e019cd8c6a958a74bb226a0fd85030d6, type: 3}
+    - target: {fileID: 8437576767659278632, guid: 41fcd088ec4b94a4a98501536f5d1660, type: 3}
+      propertyPath: m_Color.b
+      value: 0.71132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437576767659278632, guid: 41fcd088ec4b94a4a98501536f5d1660, type: 3}
+      propertyPath: m_Color.g
+      value: 0.72157645
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437576767659278632, guid: 41fcd088ec4b94a4a98501536f5d1660, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8576414554274990159, guid: 41fcd088ec4b94a4a98501536f5d1660, type: 3}
       propertyPath: m_Name
       value: Toonie
