@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GoalHandler : MonoBehaviour
 {
+    public Animator transition;
+
     public GameObject loadingScreen;
 
     private void Start()
@@ -20,7 +22,17 @@ public class GoalHandler : MonoBehaviour
         {
             Debug.Log("You win!");
             loadingScreen.SetActive(true);
-            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            //SceneManager.LoadScene(0, LoadSceneMode.Single);
+            StartCoroutine(LoadLevel());
         }
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }
