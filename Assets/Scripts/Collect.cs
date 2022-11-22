@@ -9,6 +9,8 @@ public class Collect : MonoBehaviour
 
     public PlayerBank bank;
 
+    public AudioSource collectSoundEffect;
+
     private void Start()
     {
         if (bank == null)
@@ -21,10 +23,16 @@ public class Collect : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            Debug.Log("Collected a coin!");
+            //Debug.Log("Collected a coin!");
+            collectSoundEffect.Play();
             bank.balance += currencyValue;
             
-            Destroy(gameObject);
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<MeshCollider>().enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
+
+            Destroy(gameObject, 2);
         }
     }
 }
