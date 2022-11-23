@@ -32,7 +32,7 @@ public class Collect : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(false);
 
-            Destroy(gameObject, 2);
+            Destroy(gameObject, 2.5f);
         }
     }
 }
